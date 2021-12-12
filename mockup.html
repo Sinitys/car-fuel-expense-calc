@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="fi">
+
+<head>
+  <title>Mockup</title>
+  <meta charset="utf-8" />
+</head>
+
+<body>
+  <script src="mockup.js">
+  </script>
+    <div>
+      <lable for="quantity">Quantity refueled:</lable>
+      <input id="quantity" type="number" size="24" placeholder="Quantity in liters..."/>
+      <br/>
+      <br/>
+      <lable for="price">Price of refueling:</lable>
+      <input id="price" type="number" size="24" placeholder="Price in euros..."/>
+      <br/>
+      <br/>
+      <lable for="distance">Distance driven with the refueling:</lable>
+      <input id="distance" type="number" size="24" placeholder="Distance in kilometers..."/>
+      <br/>
+      <br/>
+      <lable for="name">Name of the car:</lable>
+      <input id="name" type="text" size="24" placeholder="Name here..."/>
+      <br/>
+      <br/>
+      <button onclick="calculateExpense()">Add Refueling Expense</button>
+      <br/>
+      <button onclick="cleanStorage()">Clean local storage</button>
+      <br/>
+      <span id="total"></span>
+      <br/>
+      <span id="output"></span>
+    </div>
+</body>
+
+</html>
