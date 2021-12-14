@@ -13,11 +13,29 @@ p, td, span, div {
     font-family: Arial, sans-serif;
 }
 
+h1, h3 {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  font-family: sans-serif;
+  font-size: 40px;
+  background: linear-gradient(to left, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h1 {
+  width: 450px;
+}
+
+h3 {
+  width: 275px;
+}
+
 /* ExpenseTotal */
 .totalSpent {
     background-color: white;
     height: 100%;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 span {
@@ -35,15 +53,30 @@ span {
 /* ExpenseItem */
 
 .listFuelingHistory {
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: white;
+    display: flex;
     
 }
+
+.name, .liters, .distance, .cost{
+    display: inline-block;
+    flex-basis: 300px;
+    height: 40px;
+    padding: 10px;
+    margin-left: 20px;
+    margin-right: 50px;
+}
+
+.delete {
+    padding: 5px;
+}
+
 
 /* AddExpense */
 
 .mainForm {
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: #f2f2f2;
     padding: 20px;
 }

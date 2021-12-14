@@ -15,21 +15,21 @@ const ExpenseItem = (props) => {
 
 	return (
 		<div className='listFuelingHistory'>
-			<li className='list-group-item d-flex justify-content-between align-items-center'>
+			<div className="name">
 				{props.name}
-				<div>
+			</div>
+			<div className="liters">
 				{props.liters} liters
-				</div>
-				<div>
+			</div>
+			<div className="distance">
 				{props.distance} distance
-				</div>
-				<div>
-					<span>
-						{props.cost} €
-					</span>
-					<TiDelete size='2em' onClick={handleDeleteExpense}></TiDelete>
-				</div>
-			</li>
+			</div>
+			<div className="cost">
+				{props.cost} €
+			</div>
+			<div className="delete">
+				<TiDelete size='2em' onClick={handleDeleteExpense}></TiDelete>
+			</div>
 		</div>
 	);
 };
