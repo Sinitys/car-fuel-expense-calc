@@ -16,14 +16,22 @@ const ExpenseTotal = () => {
 		return (total += item.distance);
 	}, 0);
 
+	const averageExpenses = expenses.reduce((average) => {
+		return (average = totalDistance / totalExpenses);
+	}, 0);
+
+	const averageConsumption = expenses.reduce((average) => {
+		return (average = totalFuel / totalDistance);
+	}, 0);
+
 	return (
 		<div>
 			<span>Spent so far: {totalExpenses}€</span>
-			<span>Total Liters fueled: {totalFuel}L</span>,
+			<span>Total Liters fueled: {totalFuel}L</span>
 			<span>Total Distance driven: {totalDistance}km</span>
+			<span>Average expenses per 100 kilometers: {averageExpenses}€</span>
+			<span>Average consumption per 100 kilometers: {averageConsumption}L</span>
 		</div>
-
-
 	);
 };
 
