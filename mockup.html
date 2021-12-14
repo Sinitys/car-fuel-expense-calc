@@ -4,12 +4,14 @@
 <head>
   <title>Mockup</title>
   <meta charset="utf-8" />
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <script src="mockup.js">
   </script>
-    <div>
+  <div class="grid">
+    <div id="inputs">
       <lable for="quantity">Quantity refueled:</lable>
       <input id="quantity" type="number" size="24" placeholder="Quantity in liters..."/>
       <br/>
@@ -29,11 +31,10 @@
       <button onclick="calculateExpense()">Add Refueling Expense</button>
       <br/>
       <button onclick="cleanStorage()">Clean local storage</button>
-      <br/>
-      <span id="total"></span>
-      <br/>
-      <span id="output"></span>
+      <div id="total"></div>
     </div>
+    <div id="output"></div>
+  </div>
 </body>
 
 </html>

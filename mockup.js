@@ -25,7 +25,7 @@ function calculateExpense() {
     avgConsumption = parseInt(localStorage.getItem("averageConsumption"))
     
 
-    clean();
+    cleanTotal();
 
     tExpense = tExpense + price;
     tConsumption = tConsumption + quantity;
@@ -35,7 +35,7 @@ function calculateExpense() {
 
     total.innerHTML += "Total refueling expenses: " + tExpense + " €<br/>Total consumption: " + tConsumption + " liters<br/>Total distance driven: " + tDistance + " kilometers<br/>Average expenses per 100 kilometers: " + avgExpense + " €<br/>Average consumption per 100 kilometers: " + avgConsumption + " liters";
 
-    output.innerHTML += "<br/>Quantity refueled: " + quantity + " liters<br/>Price or refueling: " + price + " €<br/>Distance driven with the refueling: " + distance + " kilometers<br/>Name of the car: " + name +"<br/>";
+    output.innerHTML += "Quantity refueled: " + quantity + " liters<br/>Price or refueling: " + price + " €<br/>Distance driven with the refueling: " + distance + " kilometers<br/>Name of the car: " + name +"<br/><br/>";
 
     
     localStorage.setItem("totalExpense", tExpense);
@@ -55,9 +55,14 @@ function cleanStorage(){
     localStorage.setItem("averageExpense", none);
     localStorage.setItem("averageConsumption", none);
 
-    clean();
+    cleanTotal();
+    cleanOutput();
 }
 
-function clean(){
+function cleanTotal(){
     document.getElementById("total").innerHTML = "";
+}
+
+function cleanOutput(){
+    document.getElementById("output").innerHTML = "";
 }
