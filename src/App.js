@@ -4,6 +4,7 @@ import { AppProvider } from './context/AppContext';
 import ExpenseTotal from './components/ExpenseTotal';
 import ExpenseList from './components/ExpenseList';
 import AddExpense from './components/AddExpense';
+import "./App.css";
 
 
 const App = () => {
