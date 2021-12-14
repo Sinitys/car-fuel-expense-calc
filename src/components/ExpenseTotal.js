@@ -17,11 +17,13 @@ const ExpenseTotal = () => {
 	}, 0);
 
 	const averageExpenses = expenses.reduce((average) => {
-		return (average = totalDistance / totalExpenses);
+		average = totalDistance / totalExpenses;
+		return average.toPrecision(3);
 	}, 0);
 
 	const averageConsumption = expenses.reduce((average) => {
-		return (average = totalFuel / totalDistance);
+		average = totalFuel / totalDistance
+		return average.toPrecision(3);
 	}, 0);
 
 	return (
