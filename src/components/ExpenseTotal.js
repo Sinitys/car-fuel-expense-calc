@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { AppContext } from '../context/AppContext';
+import "../App.css";
 
 const ExpenseTotal = () => {
 	const { expenses } = useContext(AppContext);
@@ -27,12 +28,12 @@ const ExpenseTotal = () => {
 	}, 0);
 
 	return (
-		<div>
-			<span>Spent so far: {totalExpenses}€</span>
-			<span>Total Liters fueled: {totalFuel}L</span>
-			<span>Total Distance driven: {totalDistance}km</span>
-			<span>Average expenses per 100 kilometers: {averageExpenses}€</span>
-			<span>Average consumption per 100 kilometers: {averageConsumption}L</span>
+		<div className="totalSpent">
+			<span>Spent so far: {totalExpenses} €</span>
+			<span>Total Liters fueled: {totalFuel} L</span>
+			<span>Total Distance driven: {totalDistance} km</span>
+			<span>Average expenses per 100 kilometers: {averageExpenses} €</span>
+			<span>Average consumption per 100 kilometers: {averageConsumption} L</span>
 		</div>
 	);
 };

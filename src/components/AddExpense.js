@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { AppContext } from '../context/AppContext';
 import { v4 as uuidv4 } from 'uuid';
+import "../App.css";
 
 const AddExpense = () => {
 	const { dispatch } = useContext(AppContext);
@@ -29,7 +30,7 @@ const AddExpense = () => {
 
 	return (
 		<form onSubmit={onSubmit}>
-			<div>
+			<div className='mainForm'>
 				<div>
 					<label for='name'>Name</label>
 					<input
@@ -75,8 +76,8 @@ const AddExpense = () => {
 					></input>
 				</div>
 				<div>
-					<button type='submit'>
-						Add refueling expense
+					<button type='submit' className='button'>
+						<span>Add refueling expense</span>
 					</button>
 				</div>
 			</div>
